@@ -20,17 +20,17 @@ with open('result.csv', "w", ) as csvfile:
             name = i.encode('utf-8')
             if ' ' in name:
                 if name.split(' ')[1] == '':
-                    print name.split(' ')[0] if '.' not in name.split(' ')[0] else name.split(' ')[0][1:],name.split(' ')[2] #两个空格的情况
+                    print(name.split(' ')[0] if '.' not in name.split(' ')[0] else name.split(' ')[0][1:],name.split(' ')[2])
                     a = name.split(' ')[0] if '.' not in name.split(' ')[0] else name.split(' ')[0][1:]
                     b = name.split(' ')[2]
                     writer.writerow([a, b])
                 else:
-                    print name.split(' ')[0] if '.' not in name.split(' ')[0] else name.split(' ')[0][1:],name.split(' ')[1]
+                    print(name.split(' ')[0] if '.' not in name.split(' ')[0] else name.split(' ')[0][1:],name.split(' ')[1])
                     a = name.split(' ')[0] if '.' not in name.split(' ')[0] else name.split(' ')[0][1:]
                     b = name.split(' ')[1]
                     writer.writerow([a, b])
             if '-' in name:
-                print name.split('-')[0] if '.' not in name.split('-')[0] else name.split('-')[0][1:],name.split('-')[1]
+                print(name.split('-')[0] if '.' not in name.split('-')[0] else name.split('-')[0][1:],name.split('-')[1])
                 a = name.split('-')[0] if '.' not in name.split('-')[0] else name.split('-')[0][1:]
                 b = name.split('-')[1]
                 writer.writerow([a, b])
